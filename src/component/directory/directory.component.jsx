@@ -1,0 +1,17 @@
+import CategoryItem from "../category-item/category-item.component";
+
+import "./directory.styles.scss";
+import React from "react";
+
+const Directory = ({ categories }) => {
+  return (
+    <div className="directory-container">
+      {/* mapping on the array and a card for each object */}
+      {categories.map((category) => (
+        <CategoryItem key={category.id} category={category} />
+      ))}
+    </div>
+  );
+};
+
+export default Directory;
